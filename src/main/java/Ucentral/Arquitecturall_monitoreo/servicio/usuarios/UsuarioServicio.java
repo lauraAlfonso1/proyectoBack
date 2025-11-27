@@ -1,7 +1,7 @@
 package Ucentral.Arquitecturall_monitoreo.servicio.usuarios;
 
 import Ucentral.Arquitecturall_monitoreo.dto.RespuestaAuth;
-import Ucentral.Arquitecturall_monitoreo.dto.usuarios.ActualizarContraseñaDTO;
+import Ucentral.Arquitecturall_monitoreo.dto.usuarios.ActualizarContrasenaDTO;
 import Ucentral.Arquitecturall_monitoreo.dto.usuarios.LoginDTO;
 import Ucentral.Arquitecturall_monitoreo.dto.usuarios.RegistroDTO;
 import Ucentral.Arquitecturall_monitoreo.entidad.usuarios.Usuario;
@@ -104,7 +104,7 @@ public class UsuarioServicio {
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
     }
 
-    public void actualizarContraseña(ActualizarContraseñaDTO dto) {
+    public void actualizarContraseña(ActualizarContrasenaDTO dto) {
         Usuario usuario = usuarioRepositorio.findByCorreo(dto.getCorreo().toLowerCase().trim())
                 .orElseThrow(() -> new RuntimeException("No existe una cuenta con este correo."));
 

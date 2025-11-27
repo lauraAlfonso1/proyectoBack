@@ -2,7 +2,7 @@ package Ucentral.Arquitecturall_monitoreo.controlador.usuarios;
 
 
 import Ucentral.Arquitecturall_monitoreo.dto.RespuestaAuth;
-import Ucentral.Arquitecturall_monitoreo.dto.usuarios.ActualizarContraseñaDTO;
+import Ucentral.Arquitecturall_monitoreo.dto.usuarios.ActualizarContrasenaDTO;
 import Ucentral.Arquitecturall_monitoreo.dto.usuarios.LoginDTO;
 import Ucentral.Arquitecturall_monitoreo.dto.usuarios.RegistroDTO;
 import Ucentral.Arquitecturall_monitoreo.servicio.usuarios.UsuarioServicio;
@@ -32,7 +32,7 @@ public class UsuarioControlador {
         return usuarioServicio.iniciarSesion(dto);
     }
     @PostMapping("/actualizar-contraseña")
-    public ResponseEntity<Map<String, String>> actualizarContraseña(@RequestBody ActualizarContraseñaDTO dto) {
+    public ResponseEntity<Map<String, String>> actualizarContraseña(@RequestBody ActualizarContrasenaDTO dto) {
         try {
             usuarioServicio.actualizarContraseña(dto);
 
