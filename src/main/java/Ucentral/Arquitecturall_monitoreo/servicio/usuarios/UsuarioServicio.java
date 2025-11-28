@@ -71,6 +71,7 @@ public class UsuarioServicio {
     }
 
     // 🔹 NUEVO: lógica para asignar el siguiente telegramChatId en orden
+
     private Long asignarTelegramChatIdSecuencial() {
         // Si aún no has configurado la lista, no hacemos nada
         if (TELEGRAM_CHAT_IDS == null || TELEGRAM_CHAT_IDS.length == 0) {
